@@ -13,7 +13,16 @@
     --str-chat__secondary-text-color: #94a3b8; /* slate-400 */
 }
 
-/* Custom Scrollbar for better aesthetics */
+/* Reaction Bar Animations */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(10px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-in {
+    animation: slideUp 0.2s ease-out forwards;
+}
+
 .custom-scrollbar::-webkit-scrollbar {
     width: 6px;
 }
