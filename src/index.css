@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import "stream-chat-react/dist/css/v2/index.css";
+
+/* Stream Chat Theme Overrides */
+:root {
+    --str-chat__primary-color: #4f46e5; /* indigo-600 */
+    --str-chat__active-primary-color: #4338ca; /* indigo-700 */
+    --str-chat__background-color: #020617; /* slate-950 */
+    --str-chat__secondary-background-color: #0f172a; /* slate-900 */
+    --str-chat__border-radius-md: 1rem;
+    --str-chat__border-color: #1e293b; /* slate-800 */
+    --str-chat__text-color: #f8fafc; /* slate-50 */
+    --str-chat__secondary-text-color: #94a3b8; /* slate-400 */
+}
+
+/* Custom Scrollbar for better aesthetics */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #1e293b;
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+}
+
+/* Glassmorphism for Stream components */
+.str-chat__channel {
+    background: transparent !important;
+}
+
+.str-chat__message-list {
+    background: transparent !important;
+}
+
+.str-chat__message-input {
+    background: rgba(15, 23, 42, 0.4) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(30, 41, 59, 0.5) !important;
+    border-radius: 1rem !important;
+    margin: 1.5rem !important;
+}
+
+.str-chat__message-bubble {
+    border-radius: 1rem !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    backdrop-filter: blur(4px);
+}
+
+.str-chat__message--me .str-chat__message-bubble {
+    background: #4f46e5 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+.str-chat__message--other .str-chat__message-bubble {
+    background: rgba(30, 41, 59, 0.6) !important;
+    border-bottom-left-radius: 0 !important;
+}
